@@ -30,7 +30,8 @@ impl Component for App {
         html! {
             <html>
             <head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Slab"/>
+            <link rel="stylesheet" href="./styles.css"/>
             </head>
             <body>
             <h1>{"I love my girlfriend Trisha!"}</h1>
