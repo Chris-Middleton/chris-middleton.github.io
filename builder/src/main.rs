@@ -33,7 +33,7 @@ impl Component for App {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css"/>
             </head>
             <body>
-            <h1 text = "I love my girlfriend Trisha!"/>
+            <h1>{"I love my girlfriend Trisha!"}</h1>
             </body>
             </html>
         }
