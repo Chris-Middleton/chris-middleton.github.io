@@ -1,16 +1,16 @@
 extern crate yew;
-use std::{fs::File, future::poll_fn, io::Write, path::Path};
+use std::{fs::File, io::Write};
 
 use yew::prelude::*;
 #[tokio::main]
 async fn main() {
-    render_page::<App>("index.html").await;
+    render_page::<App>("index").await;
 }
 async fn render_page<COMP: BaseComponent>(name: &str)
 where
     COMP::Properties: Default,
 {
-    File::create(format!("..\\web\\{}", name))
+    File::create(format!("..\\web\\{}.html", name))
         .unwrap()
         .write_all(yew::ServerRenderer::<COMP>::new().render().await.as_bytes())
         .unwrap()
@@ -27,6 +27,15 @@ impl Component for App {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        html!("Heading 1")
+        html! {
+            <html>
+            <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css"/>
+            </head>
+            <body>
+            <h1 text = "I love my girlfriend Trisha!"/>
+            </body>
+            </html>
+        }
     }
 }
