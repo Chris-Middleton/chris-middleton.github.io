@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+}
+*{
+    font-family: "Roboto Slab", "Helvetica";
+    color: #D7D7D7;
+}
+body{
+    background-color:#191919;
+}
+h2{
+    color: #591c26
+}
+h3{
+    background-color: #121212;
+    padding: 10px;
+}
+h4{
+    color: #456883
+}
+.header-perm{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
