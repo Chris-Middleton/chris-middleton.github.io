@@ -10,7 +10,7 @@ async fn render_page<COMP: BaseComponent>(name: &str)
 where
     COMP::Properties: Default,
 {
-    File::create(format!("..\\web\\{}.html", name))
+    File::create(format!("..\\docs\\{}.html", name))
         .unwrap()
         .write_all(yew::ServerRenderer::<COMP>::new().render().await.as_bytes())
         .unwrap()
